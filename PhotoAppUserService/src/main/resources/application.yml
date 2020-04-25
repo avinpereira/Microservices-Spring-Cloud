@@ -4,11 +4,23 @@ server:
 
 
 spring:
+  datasource:
+    url: jdbc:h2:mem:testdb
+    driver-class-name: org.h2.Driver
+    username: sa
+    password:
+    platform: org.hibernate.dialect.H2Dialect
   devtools:
     restart:
       enabled: true
   application:
     name: users-ws
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+
 
 
 eureka:
